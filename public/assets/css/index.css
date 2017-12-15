@@ -1,0 +1,258 @@
+/*页中基本样式初始化*/
+	body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,p,a,image{
+		margin:0;
+		padding:0;
+	}
+	ul,ol{
+		list-style:none;
+	}
+	a{
+		text-decoration:none;
+		font-family:"微软雅黑";
+	}
+	body{
+		color:#9EABB3;
+	}
+/* 网页中基本样式初始化 end */
+
+/*网页头部栏目 start*/
+	.header{
+		position: relative;
+		/*display: flex;
+		align-items:center;	*/	
+		width:100%;
+		height:661px;
+		background-image: url(../images/1.jpg);
+		background-position: center center;
+	}
+	.header .nav{
+		padding:35px 40px;
+	}
+	.header .nav .logo img{
+		width:38px;
+		height:38px;
+	}
+	.header .nav .menu{
+		float:right;
+		padding:0 15px;
+		font-size:12px;
+		color:#fff;
+		height:36px;
+		line-height:38px;
+		border:1px solid #fff;
+		border-radius: 5px;
+	}
+	.header .nav .menu:hover{
+		color:#222;
+		background-color: #fff;
+	}
+	.header .nav .menu .icon-caidan{
+		font-size:12px;
+	}
+	.title{
+		position: absolute;
+		top:50%;
+		left:50%;
+		width:40%;
+		height:50%;
+		/*width:80%;*/
+		/*margin:0 auto;*/
+		margin-left:-20%;
+		margin-top:-5%;
+		text-align: center;
+		color:#fff;
+	}
+	.title h1{
+		font-size:48px;
+		margin:10px 0;
+	}
+	.title h2{
+		font-size:18px;
+		line-height:30px;
+	    font-weight: 400;
+    	font-family: "Merriweather", serif;
+	}
+	.icon{
+		position: absolute;
+		top:90%;
+		left:50%;
+		color:#fff;
+	}
+/*网页头部栏目 end*/
+
+/*右侧菜单栏 start*/
+	.menus{
+		position: fixed;
+		top:0;
+		right:-240px;
+		bottom:0;
+		width:180px;
+    	color:#fff;
+		padding:35px 30px;
+		background-color: #111;
+	}
+	.menus .close h3{
+		display: inline-block;
+	    font-size: 16px;
+    	font-weight: 100;
+	}
+	.menus .close a{
+	    float:right;
+	    color:#fff;
+	    font-size: 16px;
+	}
+	.menus .list{
+		margin:20px auto;
+	}
+	.menus .list li{
+		font-size:15px;
+		line-height:20px;
+		padding:7px;
+	}
+	.menus .list a{
+		color:#b8b8b8;
+	}
+	.menus .search input{
+		border:0;
+		outline:0;
+	    font-size: 14px;
+	    width: 100%;
+		height:33px;
+		color:#fff;
+	    background: rgba(0, 0, 0, 0.3);
+	    border:1px solid #555;
+	    border-radius: 5px;
+	}
+	.menus .search input::-webkit-input-placeholder {
+　　	color:red;
+　　}
+	.menus .sub{
+	    display: block;
+	    position: absolute;
+	    bottom: 30px;
+	    left: 30px;
+	    right: 30px;
+	    height: 38px;
+	    padding: 0 20px;
+	    color: #111;
+	    text-align: center;
+	    font-size: 12px;
+	    font-family: "Open Sans", sans-serif;
+	    line-height: 35px;
+	    border-radius: 3px;
+	    background: #fff;
+	}
+/*右侧菜单栏 end*/
+
+/*网页内容部分 start*/
+	.container{
+		width:710px;
+		margin:50px auto 0;
+	}
+	.content{
+		margin-bottom: 50px;
+		padding-bottom:50px;
+		word-wrap: break-word;
+		border-bottom: #EBF2F6 1px solid;
+	}
+	.content header h2{
+		font-size:34px;
+		color:#2e2e2e;
+		margin-bottom:15px;
+	}
+	.content section{
+		overflow: hidden;
+		height:220px;
+		text-overflow:ellipsis;
+	}
+	.content section p{
+	    font-family: "Merriweather", serif;
+		line-height:28px;
+		color:#3a4145;
+	}
+	.content footer{
+		margin-top:20px;
+	}
+	.content footer img{
+		width:24px;
+		height:24px;
+		margin-right:9px;
+		vertical-align: top;
+	}
+	.content footer a{
+		display: inline-block;
+		color: #9EABB3;
+		font-size:14px;
+	}
+	.content footer a:hover{
+		text-decoration: underline;
+	}
+	.content footer span{
+	    display: inline-block;
+	    margin-left: 8px;
+	    padding-left: 12px;
+	    border-left: #d5dbde 1px solid;
+	    font-size: 14px;
+	    color: #9EABB3;
+	    white-space: nowrap;
+	}
+	.page{
+		position: relative;
+		height:35px;
+		line-height: 35px;
+		font-size:14px;
+	    font-family: "Open Sans", sans-serif;
+		text-align: justify;
+	}
+	.page a{
+		float:right;
+		line-height: 31px;
+		padding:0 15px;
+	    color: #9EABB3;
+		border:1px solid #bfc8cd;
+	    border-radius: 4px;
+	}
+	.page a:hover{
+		color: #889093;
+    	border-color: #98a0a4;
+	}
+	.page .middle{
+		position: absolute;
+		top:0;
+		left:300px;
+	}
+	.page .left{
+		position: absolute;
+		top:0;
+		left:0;
+	}
+/*网页内容部分 end*/
+
+/*网页底部内容 start*/
+	.footer{
+		padding:12px 15px;
+		height:21px; 
+		line-height: 22px;
+		margin-top:100px;
+		font-size:12px;
+	}
+	.footer a{
+		color:#bbc7cc;	
+	}
+	.footer a:hover{
+		text-decoration:underline;
+	}
+	.footer .left{
+		float:left;
+	} 
+	.footer .left a{
+	    font-weight: bold;
+	}
+	.footer .right{
+		float:right;
+		text-align: right;
+	} 
+	.footer .right a{
+		font-weight: bold;
+	}
+/*网页底部内容 end

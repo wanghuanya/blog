@@ -1,0 +1,131 @@
+/*页中基本样式初始化*/
+	body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,p,a,image{
+		margin:0;
+		padding:0;
+	}
+	ul,ol{
+		list-style:none;
+	}
+	a{
+		text-decoration:none;
+		font-family:"微软雅黑";
+	}
+	body{
+		color:#9EABB3;
+	    font-family: "Merriweather", serif;
+	}
+/* 网页中基本样式初始化 end */
+
+/*网页头部栏目 start*/
+	.header{
+		position: relative;
+		width:100%;
+		height:382px;
+		background-image:url(../images/1.jpg);
+		background-position: center center;
+	}
+	.header .nav{
+		padding:35px 40px;
+	}
+	.header .nav .logo img{
+		width:38px;
+		height:38px;
+	}
+	.header .nav .menu{
+		float:right;
+		padding:0 15px;
+		font-size:12px;
+		color:#fff;
+		height:36px;
+		line-height:38px;
+		border:1px solid #fff;
+		border-radius: 5px;
+	}
+	.header .nav .menu:hover{
+		color:#222;
+		background-color: #fff;
+	}
+	.header .nav .menu .icon-caidan{
+		font-size:12px;
+	}
+/*网页头部栏目 end*/
+
+/*右侧菜单栏 start*/
+	.menus{
+		/*display: none;*/
+		position: fixed;
+		top:0;
+		right:-240px;
+		bottom:0;
+		width:180px;
+    	color:#fff;
+		padding:35px 30px;
+		background-color: #111;
+	}
+	.menus .close h3{
+		display: inline-block;
+	    font-size: 16px;
+    	font-weight: 100;
+	}
+	.menus .close a{
+	    float:right;
+	    color:#fff;
+	    font-size: 16px;
+	}
+	.menus .list{
+		margin:20px auto;
+	}
+	.menus .list li{
+		font-size:15px;
+		line-height:20px;
+		padding:7px;
+	}
+	.menus .list a{
+		color:#b8b8b8;
+	}
+	.menus .search input{
+		border:0;
+		outline:0;
+	    font-size: 14px;
+	    width: 100%;
+		height:33px;
+		color:#fff;
+	    background: rgba(0, 0, 0, 0.3);
+	    border:1px solid #555;
+	    border-radius: 5px;
+	}
+	.menus .sub{
+	    display: block;
+	    position: absolute;
+	    bottom: 30px;
+	    left: 30px;
+	    right: 30px;
+	    height: 38px;
+	    padding: 0 20px;
+	    color: #111;
+	    text-align: center;
+	    font-size: 12px;
+	    font-family: "Open Sans", sans-serif;
+	    line-height: 35px;
+	    border-radius: 3px;
+	    background: #fff;
+	}
+/*右侧菜单栏 end*/
+
+/*网页内容部分 start*/
+	.container{
+		width:710px;
+		margin:50px auto;
+	}
+	.container header h1{
+		font-size:48px;
+		color:#2e2e2e;
+	}
+	.container section{
+		line-height:28px;
+		color:#3a4145;
+		letter-spacing: 2px;
+		margin:42px auto;
+	}
+
+/*网页内容部分 end*/

@@ -1,0 +1,29 @@
+/**
+ * Popovers
+ */
+
+@popover-border-color: fade(black,10%);
+@popover-title-bg: white;
+@popover-arrow-width: 7px;
+@popover-arrow-outer-color: fade(black,20%);
+
+.popover {
+  border-radius: @border-radius-base;
+  padding: 12px;
+  box-shadow: 0 5px 10px 0 fade(black,15%);
+}
+.popover-title,
+.popover-content {
+  padding: 6px;
+}
+.popover-title {
+  border-bottom: 0;
+  border-radius: 2px 2px 0 0;
+  font-size: (@font-size-base + 1px);
+  font-weight: 600;
+  color: @brand-primary;
+}
+.popover-content {
+  color: #555;
+  font-size: (@font-size-base - 1px);
+}

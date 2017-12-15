@@ -1,0 +1,43 @@
+/**
+ * Progress
+ */
+
+/* General */
+
+.progress {
+  background: #f5f5f5;
+  box-shadow: inset 0 0 1px fade(black,10%);
+  border-radius: 0px;
+  height: 10px;
+}
+.progress-bar {
+  line-height: 10px;
+}
+.progress-caption,
+.progress-value {
+  font-size: (@font-size-base + 1px);
+  padding-bottom: 12px;
+}
+.progress-value {
+  text-align: right;
+  font-weight: 600;
+}
+
+/* Progress bar (small) */
+
+.progress-sm {
+  height: 3px;
+
+  > .progress-bar {
+    line-height: 3px;
+  }
+}
+
+/* Progress bar (secondary) */
+
+.progress-secondary {
+
+  > .progress-bar {
+    background-color: @brand-sec;
+  }
+}

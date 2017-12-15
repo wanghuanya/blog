@@ -1,0 +1,79 @@
+/**
+ * Navs
+ */
+
+/* Tabs */
+
+@nav-tabs-border-color: #e9e9e9;
+
+.nav-tabs > li > a {
+  border-radius: 0;
+  padding: 10px 30px;
+  color: @text-color;
+  transition: all .05s linear;
+
+  &:hover, &:focus {
+    background-color: #f9f9f9;
+    border-color: #eee #eee @nav-tabs-border-color;
+    color: @text-color;
+  }
+}
+.nav-tabs > .active > a {
+  position: relative;
+  border-top-color: transparent !important;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: -1px; right: -1px; top: -1px;
+    border-top: 2px solid @brand-primary;
+  }
+}
+
+/* Tabs Justified */
+
+.nav-tabs.nav-justified > li > a {
+  border-radius: 0;
+
+  &:hover, &:focus {
+    border-bottom-color: #eee;
+  }
+}
+@media(min-width: @screen-sm-min) {
+  .nav-tabs.nav-justified > li > a {
+
+    &:hover, &:focus {
+      border-bottom-color: @nav-tabs-border-color;
+    }
+  }
+  .nav-tabs.nav-justified > .active + li > a:hover,
+  .nav-tabs.nav-justified > .active + li > a:focus {
+    border-left-color: transparent;
+  }
+}
+
+/* Pills */
+
+.nav-pills > li > a {
+  border-radius: @border-radius-base;
+  padding: 10px 30px;
+  color: @text-color;
+  transition: all .05s linear;
+}
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
+  background-color: #f9f9f9;
+  box-shadow: inset 0 0 1px fade(black,20%);
+  color: @text-color;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background-color: @brand-sec;
+}
+
+/* Tab Pane */
+
+.tab-pane {
+  padding-top: 20px;
+}

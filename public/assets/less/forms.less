@@ -1,0 +1,29 @@
+/**
+ * Forms
+ */
+
+@input-border: fade(black,10%);
+@input-border-focus: fade(black,15%);
+
+.form-control,
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Has error */
+
+.has-error {
+
+  .form-control {
+    border-color: @brand-danger;
+    box-shadow: none !important;
+
+    &:focus {
+      border-color: darken(@brand-danger,15%);
+    }
+  }
+  .help-block {
+    color: @brand-danger;
+  }
+}

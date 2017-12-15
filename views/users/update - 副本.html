@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>添加用户</h3>
+	<form action="/users/update" method="post">
+		<input type="hidden" name="id" value="<%=results.id%>">
+		<table width="600" border="1">
+			<tr>
+				<th>用户名：</th>
+				<td><input type="text" name="username" value="<%=results.username%>"></td>
+			</tr>
+			<tr>
+				<th>年龄：</th>
+				<td><input type="number" name="age" value="<%=results.age%>"></td>
+			</tr>
+			<tr>
+				<th>性别：</th>
+				<td>
+					<label>
+						<input type="radio" name="sex" value="0" <%=results.sex===0 ? 'checked' : ''%>>男
+					</label>
+					<label>
+						<input type="radio" name="sex" value="1" <%=results.sex===1 ? 'checked' : ''%>>女
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="提交">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

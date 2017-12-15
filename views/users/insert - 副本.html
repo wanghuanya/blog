@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>添加用户</h3>
+	<form action="/users/insert" method="post">
+		<table width="600" border="1">
+			<tr>
+				<th>用户名：</th>
+				<td><input type="text" name="username" value=""></td>
+			</tr>
+			<tr>
+				<th>密码：</th>
+				<td><input type="password" name="password" value=""></td>
+			</tr>
+			<tr>
+				<th>年龄：</th>
+				<td><input type="number" name="age" value=""></td>
+			</tr>
+			<tr>
+				<th>性别：</th>
+				<td>
+					<label>
+						<input type="radio" name="sex" value="0">男
+					</label>
+					<label>
+						<input type="radio" name="sex" value="1">女
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<th>手机号：</th>
+				<td><input type="text" name="phone" value=""></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="提交">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

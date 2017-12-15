@@ -1,0 +1,50 @@
+/**
+ * Tables
+ */
+
+/* General */
+
+@table-border-color: #e6e6e6;
+
+.table > thead > tr > th {
+  border-bottom-width: 1px;
+}
+.table > thead > tr > th > span {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: (-(@table-cell-padding + 1px));
+    border-top: 2px solid @brand-primary;
+  }
+}
+.table-condensed > thead > tr > th > span {
+
+  &:after {
+    bottom: (-(@table-condensed-cell-padding + 2px));
+  }
+}
+
+/* Custom tables */
+
+.table > thead > tr > td.yellow,
+.table > tbody > tr > td.yellow,
+.table > tfoot > tr > td.yellow,
+.table > thead > tr > th.yellow,
+.table > tbody > tr > th.yellow,
+.table > tfoot > tr > th.yellow,
+.table > thead > tr.yellow > td,
+.table > tbody > tr.yellow > td,
+.table > tfoot > tr.yellow > td,
+.table > thead > tr.yellow > th,
+.table > tbody > tr.yellow > th,
+.table > tfoot > tr.yellow > th {
+  background-color: lighten(yellow, 10%);
+}
+.table-hover > tbody > tr > td.yellow:hover,
+.table-hover > tbody > tr > th.yellow:hover,
+.table-hover > tbody > tr.yellow:hover > td,
+.table-hover > tbody > tr.yellow:hover > th {
+  background-color: yellow;
+}

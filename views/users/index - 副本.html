@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>用户首页</h3>
+	<% if(admin) { %>
+		<h3>欢迎<%=admin.username%>登录网站</h3>
+		<h3><a href="/logout">退出</a></h3>
+	<% } else { %>
+		<h3><a href="/login">请登录</a></h3>
+		<h3><a href="/reg">请注册</a></h3>
+	<% } %>
+
+	<h3><a href="/users/insert">添加用户</a></h3>
+	<table width="1000" border="1">
+		<tr>
+			<th>编号</th>
+			<th>姓名</th>
+			<th>头像</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>手机号</th>
+			<th>注册时间</th>
+			<th>操作</th>
+		</tr>
+		<% results.forEach(function(value,key){ %>	
+		<tr>
+			<td><%=value.id%></td>
+			<td><%=value.username%></td>
+			<td><img src="/upload/<%=value.photo%>" width="80" alt=""></td>
+			<td><%=value.age%></td>
+			<td><%=value.sex == 0 ? '男' : '女' %></td>
+			<td><%=value.phone%></td>
+			<td><%=moment.unix(value.addtime).format('YYYY-MM-DD HH:mm:ss')%></td>
+			<td>
+				<a href="/users/update/<%=value.id%>">修改</a>	
+				<a href="/users/delete/<%=value.id%>">删除</a>	
+				<a href="/users/image/<%=value.id%>">上传头像</a>	
+			</td>
+		</tr>
+		<% }) %>
+		<tr>
+			<td colspan="8">
+				<a href="/users?p=1">首页</a>
+				<a href="/users?p=<%=page.prev%>">上一页</a>
+				<% for(var i=1; i <= page.pages; i++){ %>
+					<% if(i >= page.now+2 && i < page.pages){ %>
+						<% continue; %>
+					<% } %>
+					<a href="/users?p=<%=i%>">第<%=i%>页</a>
+				<% } %>
+				<a href="/users?p=<%=page.next%>">下一页</a>
+				<a href="/users?p=<%=page.pages%>">尾页</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

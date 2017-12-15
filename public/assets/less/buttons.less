@@ -1,0 +1,69 @@
+/**
+ * Buttons
+ */
+
+.btn-lg {
+  font-size: @font-size-base;
+  border-radius: @border-radius-base;
+}
+
+#button {
+
+  .btn(@btn-color; @btn-font-color) {
+    background-color: @btn-color;
+    border-color: fade(black,10%);
+    color: @btn-font-color;
+    transition: all .05s linear;
+
+    &:hover {
+      background-color: (@btn-color - #151515);
+      border-color: fade(black,15%);
+      color: @btn-font-color;
+    }
+    &:focus, &.focus,
+    &:active, &:active:hover, &:active:focus,
+    &.active, &.active:hover, &.active:focus {
+      background: (@btn-color - #151515);
+      border-color: fade(black,12.5%);
+      box-shadow: inset 0 3px 5px 0 fade(black,12.5%);
+      outline: none;
+    }
+  }
+
+  /*
+  .btn(@btn-color; @btn-font-color) {
+    background: @btn-color;
+    border-color: fade(black,10%);
+    color: @btn-font-color;
+    #gradient > .vertical(fade(white,20%); transparent);
+    box-shadow: inset 0 1px 1px fade(white,50%);
+
+    &:hover, &:focus, &.focus,
+    &:active, &:active:hover, &:active:focus,
+    &.active, &.active:hover, &.active:focus {
+      border-color: fade(black,15%);
+      background: @btn-color;
+      background-image: none;
+      color: @btn-font-color;
+      box-shadow: inset 0 0 1px fade(black,20%);
+      outline: 0;
+      .reset-filter();    
+    }
+  }
+  */
+}
+
+/* Button Colors */
+
+.btn-default {
+  #button > .btn(#f5f5f5; @text-color);
+}
+.btn-primary {
+  #button > .btn(@brand-primary; white);
+}
+.btn-secondary {
+  #button > .btn(@brand-sec; white);
+}
+.btn-gray {
+  #button > .btn(@brand-gray; white);
+}

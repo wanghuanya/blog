@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.33333333, maximum-scale=0.33333333,minimum-scale=0.33333333,user-scalable=0"/>
+    <link rel="stylesheet" href="/assets/css/index.css"> 
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_384678_bwssk995o6ov42t9.css">
+</head>
+<body>
+    <!-- 网页头部内容 start -->
+    <div class="header">
+        <div class="nav">
+            <a href="" class="logo"><img src="/assets/images/logo.png"></a>
+            <a href="" class="menu">
+                <i class="iconfont icon-caidan"></i>
+                <span>MENU</span>
+            </a>
+        </div>
+        <div class="title">
+            <h1>我的博客</h1>
+            <h2>人生得意须尽欢，莫使金樽空对月</h2>
+        </div>
+        <a class="icon" href=""><i class="iconfont icon-jiantou"></i></a>
+    </div> 
+    <!-- 网页头部内容 end -->
+
+    <!-- 右侧菜单栏 start -->
+    <div class="menus">
+        <div class="close">
+            <h3>MENU</h3>
+            <a href=""><i class="iconfont icon-close"></i></a>
+        </div>
+        <ul class="list">
+            <% results2.forEach(function(value,key){ %>
+            <li><a href="?tid=<%=value.id%>"><%=value.sort%></a></li>
+            <% }) %>
+        </ul>
+        <div class="search">
+            <input type="text" placehoder="搜索" value="">
+        </div>
+        <a href="" class="sub">SUBSCRIBE</a>
+    </div>
+    <!-- 右侧菜单栏 end -->
+
+    <!-- 网页内容部分 start -->
+    <div class="container">
+        <% results1.forEach(function(value,key){ %>
+        <div class="content">
+            <article>
+                <header>
+                    <a href="/show/<%=value.id%>"><h2><%=value.title%></h2></a>
+                </header>
+                <section>
+                    <p><%=value.content%></p>
+                </section>
+                <footer>
+                    <img src="/assets/images/logo.png" alt="">
+                    <a href="">Author</a>
+                    <span><%=moment.unix(value.addtime).format('YYYY-MM-DD HH:mm:ss')%></span>
+                </footer>
+            </article>
+        </div>
+        <% }) %>
+
+        <div class="page">
+            <a href="?p=<%=page.next%><%=param%>">Older Posts →</a>
+                <a class="middle" href="?p=<%=page.now%><%=param%>">Page <%=page.now%> of <%=page.pages%></a>
+            <a class="left" href="?p=<%=page.prev%><%=param%>">← Newer Posts</a>
+        </div>
+    </div>
+    <!-- 网页内容部分 end -->
+
+    <!-- 网页底部内容 start -->
+    <div class="footer">
+        <div class="left">
+            <a href="">朱志超的博客</a>
+            <span>@2017</span>
+        </div>
+        <div class="right">
+            <span>Proudly published with</span>
+            <a href="">Bitcron</a>
+            <span>& Theme</span>
+            <a href="">Casper</a>
+        </div>
+    </div>
+    <!-- 网页底部内容 end -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>

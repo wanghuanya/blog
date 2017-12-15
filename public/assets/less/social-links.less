@@ -1,0 +1,70 @@
+/**
+ * Social links
+ */
+ 
+.social {
+  margin-bottom: 15px;
+}
+.social > ul,
+.social > ul > li {
+  margin: 0 0 10px;
+  padding: 0;
+}
+.social li > a {
+  display: inline-block;
+  background: #f5f5f5;
+  border: 1px solid fade(black,10%);
+  color: @text-color;
+  .circle(34px);
+  transition: all .1s linear;
+
+  &.rss:hover {
+    background: @rss-color;
+  }
+  &.facebook:hover {
+    background: @facebook-color;
+  }
+  &.twitter:hover {
+    background: @twitter-color;
+  }
+  &.plus:hover {
+    background: @google-plus-color;
+  }
+  &.vk:hover {
+    background: @vk-color;
+  }
+  &.pinterest:hover {
+    background: @pinterest-color;
+  }
+  &.vimeo:hover {
+    background: @vimeo-color;
+  }
+  &.github:hover {
+    background: @github-color;
+  }
+  &.linkedin:hover {
+    background: @linkedin-color;
+  }
+  &.dropbox:hover {
+    background: @dropbox-color;
+  }
+  &.youtube:hover {
+    background: @youtube-color;
+  }
+}
+.social li:hover > a {
+  color: #fff;
+  border-color: transparent;
+}
+
+/*** Social Large ***/
+
+.social-lg li > a {
+  .circle(45px);
+}
+
+/*** Social Small ***/
+
+.social-sm li > a {
+  .circle(30px);
+}

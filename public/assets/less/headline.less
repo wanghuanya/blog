@@ -1,0 +1,62 @@
+/**
+ * Headline
+ */
+
+.section > .headline:first-child, .section > .headline-lg:first-child {
+  margin-top: 0;
+}
+.headline {
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 18px;
+
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 50%;
+    height: 6px;
+    margin-top: -3px;
+    border-width: 1px 0 1px;
+    border-style: solid;
+    border-color: #e9e9e9;
+  }
+
+  > span {
+    display: inline-block;
+    position: relative;
+    background: white;
+    padding-right: 15px;
+  }
+}
+
+/* Headline: Large */
+
+.headline-lg {
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+
+  + h4 {
+    margin: -15px auto 45px;
+    text-align: center;
+    font-size: (@font-size-base + 1px);
+    color: #757575;
+  }
+}
+.headline-lg_left {
+  text-align: left;
+
+  + h4 {
+    text-align: left;
+  }
+}
+.headline-lg_right {
+  text-align: right;
+
+  + h4 {
+    text-align: right;
+  }
+}

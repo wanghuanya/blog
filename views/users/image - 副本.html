@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>上传头像</h3>
+	<form action="/users/image" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="id" value="<%=id%>">
+		头像：<input type="file" name="photo" value="选择文件">
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>
